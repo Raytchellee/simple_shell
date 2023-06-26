@@ -10,12 +10,12 @@ void free_struct(cli_data *cli_frame)
 {
 	unsigned int idx;
 
-	for (idx = 0; cli_frame->_env_var[idx]; idx++)
+	for (idx = 0; cli_frame->_environ[idx]; idx++)
 	{
-		free(cli_frame->_env_var[idx]);
+		free(cli_frame->_environ[idx]);
 	}
 
-	free(cli_frame->_env_var);
+	free(cli_frame->_environ);
 	free(cli_frame->shell_id);
 }
 
@@ -39,14 +39,14 @@ void set_struct(cli_data *cli_frame, char **arg_v)
 	while (environ[idx])
 		idx++;
 
-	cli_frame->_env_var = malloc(sizeof(char *) * (idx + 1));
+	cli_frame->_environ = malloc(sizeof(char *) * (idx + 1));
 
 	for (idx = 0; environ[idx]; idx++)
 	{
-		cli_frame->_env_var[idx] = _strdup(environ[idx]);
+		cli_frame->_environ[idx] = _strdup(environ[idx]);
 	}
 
-	cli_frame->_env_var[idx] = NULL;
+	cli_frame->_environ[idx] = NULL;
 	cli_frame->shell_id = _to_string(getpid());
 }
 

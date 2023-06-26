@@ -1,4 +1,4 @@
-[200~#include "main.h"
+#include "main.h"
 
 /**
  * create_cpy - create info from already existing one

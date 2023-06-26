@@ -33,7 +33,7 @@ int main_exit(cli_data *cli_frame)
 		check_num = _isdigit(cli_frame->arguments[1]);
 		len = _strlen(cli_frame->arguments[1]);
 		is_large = stat_check > (unsigned int)INT_MAX;
-		if (len > 10|| !check_num || is_large)
+		if (len > 10 || !check_num || is_large)
 		{
 			call_error(cli_frame, 2);
 			cli_frame->status = 2;

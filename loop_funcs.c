@@ -105,7 +105,7 @@ int main_cd(cli_data *cli_frame)
 		cd_before(cli_frame);
 		return (1);
 	}
-	if ( _strcmp("..", wd) == 0 || _strcmp(".", wd) == 0)
+	if (_strcmp("..", wd) == 0 || _strcmp(".", wd) == 0)
 	{
 		cd_parent(cli_frame);
 		return (1);

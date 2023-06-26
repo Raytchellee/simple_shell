@@ -59,7 +59,7 @@ void builtin_help(void)
 	write(STDOUT_FILENO, text, _strlen(text));
 	text = "The commands are internally defined.";
 	write(STDOUT_FILENO, text, _strlen(text));
-	text = "Enter 'help' to see command list"
+	text = "Enter 'help' to see command list";
 	write(STDOUT_FILENO, text, _strlen(text));
 	text = "Enter 'input name' to see more";
 	write(STDOUT_FILENO, text, _strlen(text));
