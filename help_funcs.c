@@ -65,7 +65,7 @@ void builtin_help(void)
 	write(STDOUT_FILENO, text, _strlen(text));
 	text = " about function 'name'.\n\n ";
 	write(STDOUT_FILENO, text, _strlen(text));
-	text = " alias: usage alias [name=['string']]\n";
+	text = " alias: alias [name[='value'] ...]\n";
 	write(STDOUT_FILENO, text, _strlen(text));
 	text = " cd: usage cd [-L|[-P [-e]] [-@]] [dir]";
 	write(STDOUT_FILENO, text, _strlen(text));

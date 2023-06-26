@@ -7,7 +7,7 @@
 
 void help_info(void)
 {
-	char *text = "help: usage help [-dms] [pattern ...]\n\t";
+	char *text = "help: help [-dms] [pattern ...]\n\t";
 
 	write(STDOUT_FILENO, text, _strlen(text));
 	text = "You can view information for built-ins commands.\n ";
@@ -23,7 +23,7 @@ void help_info(void)
 
 void alias_help_info(void)
 {
-	char *text = "alias: usage alias [-p] [name[=value]...]\n\t";
+	char *text = "alias: alias [name[='value'] ...]\n\t";
 
 	write(STDOUT_FILENO, text, _strlen(text));
 	text = "You can either define or display aliases.\n ";
