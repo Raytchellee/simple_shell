@@ -2,7 +2,7 @@
 
 /**
  * append_sep - appends seperator to end of list
- * @hd: linkeed list head
+ * @head: linkeed list head
  * @sep: input separator
  * Return: the linked list address
  */
